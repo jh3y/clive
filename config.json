@@ -1,0 +1,61 @@
+{
+  "tasks": {
+    "linking"   : true,
+    "homebrew"  : true
+  },
+  "brew_packages": [
+    "git",
+    "fish",
+    "mongodb",
+    "phantomjs"
+  ],
+  "apm_packages": [
+    "atom-color-highlight",
+    "linter",
+    "linter-jshint",
+    "lorem-ipsum",
+    "atom-monokai-dark",
+    "tabs-to-spaces",
+    "language-jade",
+    "autocomplete-plus",
+    "trailing-spaces"
+  ],
+  "brew_casks": [
+    "android-file-transfer",
+    "atom",
+    "firefox",
+    "flux",
+    "google-chrome",
+    "google-drive",
+    "google-hangouts",
+    "skype",
+    "spotify",
+    "steam",
+    "quickcast",
+    "the-unarchiver"
+  ],
+  "global_npm_modules": {
+    "bower": "latest",
+    "coffee-script": "latest",
+    "express-generator": "latest",
+    "grunt-cli": "latest",
+    "gulp": "latest",
+    "jade": "latest",
+    "less": "latest",
+    "phantomjs": "latest",
+    "mocha-phantomjs": "latest",
+    "sike": "latest"
+  },
+  "apple_apps_to_remove": [
+    "Contacts.app",
+    "Calculator.app",
+    "Messages.app",
+    "iBooks.app",
+    "iTunes.app",
+    "Facetime.app",
+    "Maps.app",
+    "Notes.app",
+    "Mail.app",
+    "Game Center.app"
+  ]
+}
