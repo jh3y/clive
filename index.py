@@ -19,11 +19,7 @@ print '###################################'
 print '# CLIVE WANTS TO MAKE THINGS EASY #'
 print '###################################'
 
-
-# Load the user config
-with open('config.json') as packages:
-    config = json.load(packages)
-
+config = {}
 
 def ask(question):
     reply = raw_input(question + ' (y/n): ').lower().strip()
@@ -34,11 +30,18 @@ def ask(question):
     else:
         return ask("please enter y/n ")
 
-goInteractive = ask('would you like to tell Clive what to do? (else rely on config.tasks)')
 
+try:
+    with open('clive.json') as packages:
+        config = json.load(packages)
 
-if goInteractive:
-    for task in config['tasks']:
-        config['tasks'][task] = ask('Do you want to run ' + task + '?')
+    goInteractive = ask('would you like to tell Clive what to do? (else rely on config.tasks)')
 
-tasks.runner.run(config)
+    if goInteractive:
+        for task in config['tasks']:
+            config['tasks'][task] = ask('Do you want to run ' + task + '?')
+
+    tasks.runner.run(config)
+
+except IOError:
+    print '[ clive ] there is no config file in place :('

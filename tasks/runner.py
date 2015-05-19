@@ -1,4 +1,3 @@
-
 def run_task(task):
     myClass = __import__('tasks.' + task)
     mod = getattr(myClass, task)
